@@ -1,0 +1,31 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --text-color: #0D1321;
+    --background: #E5E9EC;
+    --background-secondary: #d5dade;
+    --primary: #63C132;
+    --secondary: #358600;
+    --pop: #F25F5C;
+}
+
+html,
+body {
+    margin: 0;
+    height: 100%;
+    background-color: var(--background);
+}
+
+#largestHeader {
+    padding: 10px;
+    background-color: var(--background-secondary);
+}
+
+#largestHeader #title,
+#largestHeader #author {
+    margin: 0;
+}
