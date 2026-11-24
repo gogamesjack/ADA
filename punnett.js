@@ -10,13 +10,20 @@ const tableP22 = document.getElementById("parent22");
 function updateCellColor(cell, genotype) {
     if (genotype === "AA") {
         cell.className = "goodSquare";
-    } else if (genotype === "Aa" || genotype === "aA") {
+    } else if (genotype === "Aa") {
         cell.className = "carrierSquare";
     } else if (genotype === "aa") {
         cell.className = "affectedSquare";
     } else {
         cell.className = "";
     }
+}
+
+function normalizeGenotype(firstAllele, secondAllele) {
+    if (!firstAllele || !secondAllele) {
+        return '';
+    }
+    return firstAllele === secondAllele ? firstAllele + secondAllele : 'Aa';
 }
 
 function updateTable() {
@@ -31,10 +38,11 @@ function updateTable() {
     tableP22.textContent = p2[1] || '';
 
     // update Punnett Square
-    resultTable.rows[1].cells[1].textContent = (p1[0] || '') + (p2[0] || '');
-    resultTable.rows[1].cells[2].textContent = (p1[0] || '') + (p2[1] || '');
-    resultTable.rows[2].cells[1].textContent = (p1[1] || '') + (p2[0] || '');
-    resultTable.rows[2].cells[2].textContent = (p1[1] || '') + (p2[1] || '');
+    // Parent 1 labels the column headers; Parent 2 labels the row headers.
+    resultTable.rows[1].cells[1].textContent = normalizeGenotype(p2[0], p1[0]);
+    resultTable.rows[1].cells[2].textContent = normalizeGenotype(p2[0], p1[1]);
+    resultTable.rows[2].cells[1].textContent = normalizeGenotype(p2[1], p1[0]);
+    resultTable.rows[2].cells[2].textContent = normalizeGenotype(p2[1], p1[1]);
 
     updateCellColor(resultTable.rows[1].cells[1], resultTable.rows[1].cells[1].textContent);
     updateCellColor(resultTable.rows[1].cells[2], resultTable.rows[1].cells[2].textContent);
@@ -61,10 +69,10 @@ function updateAffectedBar() {
     const p2 = parent2Input.value.split('');
 
     const genotypes = [
-        (p1[0] || '') + (p2[0] || ''),
-        (p1[0] || '') + (p2[1] || ''),
-        (p1[1] || '') + (p2[0] || ''),
-        (p1[1] || '') + (p2[1] || '')
+        normalizeGenotype(p2[0], p1[0]),
+        normalizeGenotype(p2[0], p1[1]),
+        normalizeGenotype(p2[1], p1[0]),
+        normalizeGenotype(p2[1], p1[1])
     ];
 
     let goodCount = 0;
@@ -74,7 +82,7 @@ function updateAffectedBar() {
     genotypes.forEach(genotype => {
         if (genotype === "AA") {
             goodCount++;
-        } else if (genotype === "Aa" || genotype === "aA") {
+        } else if (genotype === "Aa") {
             carrierCount++;
         } else if (genotype === "aa") {
             affectedCount++;
