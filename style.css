@@ -5,27 +5,141 @@
 }
 
 :root {
-    --text-color: #0D1321;
-    --background: #E5E9EC;
-    --background-secondary: #d5dade;
-    --primary: #63C132;
-    --secondary: #358600;
-    --pop: #F25F5C;
+    --background: #F0F6FC;
+    --surface: #FFFFFF;
+    --accent: #1769AA;
+    --text: #18334C;
+    --carrier: #A16B08;
+    --affected: #C83D4D;
 }
+
 
 html,
 body {
-    margin: 0;
+    margin: 8px;
     height: 100%;
+    font-family: 'Inter', sans-serif;
     background-color: var(--background);
 }
 
-#largestHeader {
-    padding: 10px;
-    background-color: var(--background-secondary);
+/* #region Navigation */
+
+#navbar {
+    background-color: var(--surface);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
 }
 
-#largestHeader #title,
-#largestHeader #author {
+#navbar h3 {
+    color: var(--accent);
     margin: 0;
+}
+
+#navbar h3 a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+#navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+#navbar li a {
+    color: var(--text);
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+/* #endregion */
+
+/* #region Home */
+
+#home {
+    text-align: center;
+    padding: 20px;
+}
+
+#home h2 {
+    font-weight: 100;
+    color: var(--accent);
+}
+
+#home h1 {
+    font-weight: bold;
+    color: var(--text);
+}
+
+/* #endregion */
+
+/* #region Overview */
+
+.subtitle {
+    font-weight: 100;
+    color: var(--accent);
+}
+
+#infoCardCase {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.overCard {
+    flex: 1;
+}
+
+.infoCard {
+    padding: 8px;
+    background-color: var(--surface);
+    border-radius: 8px;
+}
+
+.infoCard h4 {
+    font-size: 1.2em;
+    font-weight: 0;
+    margin-top: 4px;
+    color: var(--accent);
+}
+
+.infoCard p {
+    font-size: 0.8em;
+    color: var(--text);
+}
+
+/* #endregion */
+
+/* #region Protein Synthesis */
+
+.proteinCard {
+    border-radius: 8px;
+    background-color: var(--surface);
+    padding: 4px 16px;
+}
+
+.proteinCard header {
+    display: flex;
+    align-items: center;
+    color: var(--text);
+    gap: 8px;
+}
+
+.proteinCard header button {
+    width: 32px;
+    height: 32px;
+    border: none;
+    color: var(--text);
+    background-color: var(--surface);
+    font-size: 1.2em;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-out;
+}
+
+.proteinCard header button:hover {
+    background-color: var(--background);
+    transition: background-color 0.3s ease-out;
 }

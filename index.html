@@ -6,21 +6,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADA Deficiency</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="assets/Favicon.png">
 </head>
 
 <body>
-    <header id="largestHeader">
-        <h1 id="title">ADA Deficiency</h1>
-        <h2 id="author">Jack Leskowski</h2>
-    </header>
-    <main>
-        pass
-    </main>
-    <footer>
-        <a>Jacob Leskowski</a>
-        <a>Source 1</a>
-        <a>Source 2</a>
-    </footer>
+    <nav id="navbar">
+        <h3><a href="#home">ADA Deficiency</a></h3>
+        <ul>
+            <a href="#overview">Overview</a>
+            </li>
+        </ul>
+    </nav>
+    <section id="home">
+        <svg id="animatedDNA"></svg>
+        <h2>Jacob Leskowski</h2>
+        <h1>ADA Deficiency</h1>
+    </section>
+    <section id="overview">
+        <h2 class="subtitle">Overview</h2>
+        <section id="infoCardCase">
+            <aside class="infoCard overCard">
+                <h4>ADA</h4>
+                <p>Affected gene</p>
+            </aside>
+            <aside class="infoCard overCard">
+                <h4>20</h4>
+                <p>Chromosome</p>
+            </aside>
+            <aside class="infoCard overCard">
+                <h4>AR</h4>
+                <p>Inheritance</p>
+            </aside>
+        </section>
+        <aside class="infoCard">
+            <h4>What is ADA Deficiency?</h4>
+            <p>A rare genetic disorder that affects the development and function of the immune system.</p>
+        </aside>
+    </section>
+    <section id="Protein Synthesis">
+        <h2 class="subtitle">Protein Synthesis</h2>
+        <section id="proteinStepCase">
+            <aside class="proteinCard">
+                <header>
+                    <button>▶</button>
+                    <h4>Transcription</h4>
+                </header>
+                <p>Inside the nucleus, the information stored in a gene is copied into RNA.</p>
+            </aside>
+        </section>
+        <footer>
+            <a>Jacob Leskowski</a>
+            <a>Source 1</a>
+            <a>Source 2</a>
+        </footer>
+        <script src="dnaAnimation.js"></script>
+        <script src="proteinCards.js"></script>
+
 </body>
 
 </html>
