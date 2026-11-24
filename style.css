@@ -9,6 +9,7 @@
     --surface: #FFFFFF;
     --accent: #1769AA;
     --text: #18334C;
+    --good: #0A8A0A;
     --carrier: #A16B08;
     --affected: #C83D4D;
 }
@@ -69,6 +70,11 @@ body {
     color: var(--accent);
 }
 
+#home h2 a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
 #home h1 {
     font-weight: bold;
     color: var(--text);
@@ -87,6 +93,8 @@ body {
     display: flex;
     gap: 16px;
     margin-bottom: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .overCard {
@@ -97,13 +105,23 @@ body {
     padding: 8px;
     background-color: var(--surface);
     border-radius: 8px;
+    min-width: 200px;
 }
 
 .infoCard h4 {
     font-size: 1.2em;
     font-weight: 0;
     margin-top: 4px;
+    text-decoration: none;
     color: var(--accent);
+}
+
+footer #infoCardCase a,
+footer #infoCardCase a:visited,
+footer #infoCardCase a:hover,
+footer #infoCardCase a:active {
+    color: inherit;
+    text-decoration: none;
 }
 
 .infoCard p {
@@ -116,6 +134,7 @@ body {
 /* #region Protein Synthesis */
 
 .proteinCard {
+    margin: 16px 0;
     border-radius: 8px;
     background-color: var(--surface);
     padding: 4px 16px;
@@ -142,4 +161,70 @@ body {
 .proteinCard header button:hover {
     background-color: var(--background);
     transition: background-color 0.3s ease-out;
+}
+
+/* #endregion */
+
+/* #region Punnett Square */
+
+#punnett table {
+    width: 100%;
+}
+
+#punnett td {
+    border-radius: 4px;
+    width: 30%;
+    justify-content: center;
+    text-align: center;
+}
+
+.noneSquare {
+    background-color: var(--background);
+}
+
+.baseSquare {
+    background-color: var(--surface);
+}
+
+.goodSquare {
+    background-color: var(--good);
+}
+
+.carrierSquare {
+    background-color: var(--carrier);
+}
+
+.affectedSquare {
+    background-color: var(--affected);
+}
+
+#bees {
+    display: flex;
+    justify-content: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.options {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    background-color: var(--surface);
+    width: fit-content;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+select {
+    background-color: var(--background);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 2px;
+    border-radius: 8px;
+}
+
+#affectedBar {
+    margin-top: 12px;
 }

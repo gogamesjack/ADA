@@ -13,18 +13,22 @@
     <nav id="navbar">
         <h3><a href="#home">ADA Deficiency</a></h3>
         <ul>
-            <a href="#overview">Overview</a>
-            </li>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#protein-synthesis">DNA &amp; Protein</a></li>
+            <li><a href="#mutation">Mutations</a></li>
+            <li><a href="#treatments">Treatments</a></li>
+            <li><a href="#punnett">Inheritance</a></li>
+            <li><a href="#sources">Sources</a></li>
         </ul>
     </nav>
     <section id="home">
         <svg id="animatedDNA"></svg>
-        <h2>Jacob Leskowski</h2>
+        <h2><a href="https://jacob-leskowski.github.io/" target="_blank">Jacob Leskowski</a></h2>
         <h1>ADA Deficiency</h1>
     </section>
     <section id="overview">
         <h2 class="subtitle">Overview</h2>
-        <section id="infoCardCase">
+        <section class="infoCardCase">
             <aside class="infoCard overCard">
                 <h4>ADA</h4>
                 <p>Affected gene</p>
@@ -40,10 +44,10 @@
         </section>
         <aside class="infoCard">
             <h4>What is ADA Deficiency?</h4>
-            <p>A rare genetic disorder that affects the development and function of the immune system.</p>
+            <p>ADA deficiency is a rare inherited immune-system disorder. Changes in the ADA gene on chromosome 20 reduce or eliminate production of adenosine deaminase, an enzyme needed for healthy lymphocyte development and function.</p>
         </aside>
     </section>
-    <section id="Protein Synthesis">
+    <section id="protein-synthesis">
         <h2 class="subtitle">Protein Synthesis</h2>
         <section id="proteinStepCase">
             <aside class="proteinCard">
@@ -51,16 +55,156 @@
                     <button>▶</button>
                     <h4>Transcription</h4>
                 </header>
-                <p>Inside the nucleus, the information stored in a gene is copied into RNA.</p>
+                <p>DNA is packaged into chromosomes in the nucleus. A gene is a DNA instruction; during transcription, the ADA gene's instruction is copied into messenger RNA (mRNA).</p>
+            </aside>
+            <aside class="proteinCard">
+                <header>
+                    <button>▶</button>
+                    <h4>Translation</h4>
+                </header>
+                <p>Outside the nucleus, ribosomes read mRNA in groups of three bases and join amino acids in the specified order. This process builds a protein.</p>
+            </aside>
+            <aside class="proteinCard">
+                <header>
+                    <button>▶</button>
+                    <h4>Protein</h4>
+                </header>
+                <p>The amino acid sequence guides how a protein folds. The ADA protein—adenosine deaminase—normally breaks down adenosine and deoxyadenosine; its three-dimensional shape is essential to that job.</p>
             </aside>
         </section>
-        <footer>
-            <a>Jacob Leskowski</a>
-            <a>Source 1</a>
-            <a>Source 2</a>
+        <section id="mutation">
+            <h2 class="subtitle">Mutation</h2>
+            <section class="infoCardCase">
+                <aside class="infoCard">
+                    <h4>What Is a Mutation?</h4>
+                    <p>A mutation is a change in a gene's DNA sequence. A point mutation changes one DNA building block and can change one amino acid or stop protein production early. A frameshift mutation adds or removes bases, shifting the reading pattern for later amino acids.</p>
+                </aside>
+                <aside class="infoCard">
+                    <h4>Action of ADA</h4>
+                    <p>Adenosine deaminase normally breaks down adenosine and deoxyadenosine, helping prevent toxic breakdown products from building up.</p>
+                </aside>
+                <aside class="infoCard">
+                    <h4>Effect of Mutation</h4>
+                    <p>ADA mutations can make too little working enzyme or an enzyme that does not work properly. Harmful metabolites then accumulate, damaging lymphocytes and weakening immune defenses.</p>
+                </aside>
+            </section>
+        </section>
+        <section id="symptoms">
+            <h2 class="subtitle">Symptoms</h2>
+            <section class="infoCardCase">
+                <aside class="infoCard">
+                    <h4>Frequent Infections</h4>
+                    <p>Reduced immune defenses can lead to repeated, severe, or unusual infections.</p>
+                </aside>
+                <aside class="infoCard">
+                    <h4>Chronic Diarrhea</h4>
+                    <p>Persistent diarrhea may occur alongside infections and can contribute to dehydration or poor nutrition.</p>
+                </aside>
+                <aside class="infoCard">
+                    <h4>Poor Growth</h4>
+                    <p>Frequent illness and difficulty absorbing enough nutrition can slow growth or cause failure to thrive.</p>
+                </aside>
+                <aside class="infoCard">
+                    <h4>Respiratory Illness</h4>
+                    <p>Susceptibility to pneumonia and other lung infections can make breathing problems serious.</p>
+                </aside>
+            </section>
+        </section>
+        <section id="treatments">
+            <h2 class="subtitle">Treatments</h2>
+            <section class="infoCardCase">
+                <aside class="infoCard">
+                    <h4>Enzyme Replacement</h4>
+                    <p>PEG-ADA supplies a modified form of the missing enzyme to lower toxic metabolites. It provides ADA activity while treatment continues, but it does not repair the ADA gene.</p>
+                </aside>
+                <aside class="infoCard">
+                    <h4>Stem Cell Transplantation</h4>
+                    <p>A hematopoietic stem cell transplant can replace blood-forming cells with donor cells that make functional ADA. When successful, it can restore ADA function in the immune system; donor availability and transplant risks matter.</p>
+                </aside>
+                <aside class="infoCard">
+                    <h4>Gene Therapy</h4>
+                    <p>Gene therapy adds a working ADA gene to a person's own blood-forming stem cells before they are returned. Its goal is to restore ADA function in immune cells without a donor transplant.</p>
+                </aside>
+                <aside class="infoCard">
+                    <h4>Supportive Care</h4>
+                    <p>Preventing and treating infections, using immune support when needed, and monitoring nutrition help protect health. Supportive care manages complications but does not restore ADA enzyme function.</p>
+                </aside>
+            </section>
+        </section>
+        <section id="punnett">
+            <h2 class="subtitle">Punnett Square</h2>
+            <p class="sectionIntro">ADA deficiency is autosomal recessive: <strong>A</strong> represents a working copy and <strong>a</strong> a nonworking copy. The square combines one allele from each parent to show possible—not guaranteed—outcomes for each pregnancy.</p>
+            <div id="bees">
+                <div class="options">
+                    <label for="parent1">Parent 1</label>
+                    <select id="parent1" name="parent1">
+                        <option value="AA">AA</option>
+                        <option value="Aa" selected>Aa</option>
+                        <option value="aa">aa</option>
+                    </select>
+                </div>
+                <div class="options">
+                    <label for="parent2">Parent 2</label>
+                    <select id="parent2" name="parent2">
+                        <option value="AA">AA</option>
+                        <option value="Aa" selected>Aa</option>
+                        <option value="aa">aa</option>
+                    </select>
+                </div>
+            </div>
+            <table id="punnettSquare">
+                <tr>
+                    <td class="noneSquare"></td>
+                    <td class="baseSquare" id="parent11">A</td>
+                    <td class="baseSquare" id="parent12">A</td>
+                </tr>
+                <tr>
+                    <td class="baseSquare" id="parent21">A</td>
+                    <td class="goodSquare" id="output1">AA</td>
+                    <td class="carrierSquare" id="output2">Aa</td>
+                </tr>
+                <tr>
+                    <td class="baseSquare" id="parent22">a</td>
+                    <td class="carrierSquare" id="output3">Aa</td>
+                    <td class="affectedSquare" id="output4">aa</td>
+                </tr>
+            </table>
+            <svg id="affectedBar"></svg>
+            <p class="legend"><span class="legendItem goodSquare">AA: unaffected</span><span class="legendItem carrierSquare">Aa: carrier</span><span class="legendItem affectedSquare">aa: affected</span></p>
+        </section>
+    </main>
+        <footer id="sources">
+            <h2 class="subtitle">Sources</h2>
+            <section class="infoCardCase">
+                <a href="https://medlineplus.gov/genetics/condition/adenosine-deaminase-deficiency/" target="_blank">
+                    <aside class="infoCard">
+                        <h4>MedlinePlus Genetics</h4>
+                        <p>Adenosine deaminase deficiency</p>
+                    </aside>
+                </a>
+                <a href="https://www.ncbi.nlm.nih.gov/books/NBK1483/" target="_blank">
+                    <aside class="infoCard">
+                        <h4>GeneReviews — NCBI Bookshelf</h4>
+                        <p>Adenosine Deaminase Deficiency</p>
+                    </aside>
+                </a><a href="https://medlineplus.gov/genetics/gene/ada/" target="_blank">
+                    <aside class="infoCard">
+                        <h4>MedlinePlus Genetics</h4>
+                        <p>ADA gene</p>
+                    </aside>
+                </a>
+                <a href="https://pubmed.ncbi.nlm.nih.gov/30194989/" target="_blank">
+                    <aside class="infoCard">
+                        <h4>PubMed</h4>
+                        <p>Consensus approach for the management of severe combined immune deficiency caused by
+                            adenosine deaminase deficiency</p>
+                    </aside>
+                </a>
+            </section>
         </footer>
-        <script src="dnaAnimation.js"></script>
-        <script src="proteinCards.js"></script>
+    <script src="dnaAnimation.js"></script>
+    <script src="proteinCards.js"></script>
+    <script src="punnett.js"></script>
 
 </body>
 
